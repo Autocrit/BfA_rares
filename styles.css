@@ -12,5 +12,6 @@ table {
 	width: 100%;
 	border-collapse: collapse;
 	border: 2px solid black;
-	white-space: pre;
+	white-space: nowrap;
+    text-overflow: clip;
 }
