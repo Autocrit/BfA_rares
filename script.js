@@ -1,5 +1,5 @@
 function update() {
-	console.log("Update called")
+	alert("Update called");
 	loadJSON("items.json", itemsToTable, 'jsonp');
 }
 
