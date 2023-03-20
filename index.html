@@ -4,26 +4,97 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BfA rares</title>
-	<!--<link rel="stylesheet" href="styles.css">-->
+	<link rel="stylesheet" href="styles.css">
 	<script type="text/javascript" src="script.js"></script>
 </head>
 <body">
-	<input type="checkbox" id="Drustvar" id="Drustvar"><label for="Drustvar">Drustvar</label><br>
-	<input type="checkbox" id="Nazmir" id="Nazmir"><label for="Nazmir">Nazmir</label><br>
-	<input type="checkbox" id="Tiragarde_Sound" id="Tiragarde_Sound"><label for="Tiragarde_Sound">Tiragarde Sound</label><br>
-	<input type="checkbox" id="Zuldazar" id="DrusZuldazartvar"><label for="Zuldazar">Zuldazar</label><br>
+    <label>Zones:</label><br>
+    <input type="checkbox" id="drustvar" onclick="update()" checked /><label for="drustvar">Drustvar</label><br>
+    <input type="checkbox" id="nazmir" onclick="update()" checked /><label for="nazmir">Nazmir</label><br>
+    <input type="checkbox" id="tiragarde_sound" onclick="update()" checked /><label for="tiragarde_sound">Tiragarde Sound</label><br>
+    <input type="checkbox" id="zuldazar" onclick="update()" checked /><label for="zuldazar">Zuldazar</label><br>
+
+    <label for="armour_type">Armour type:</label><br>
+    <select name="armour_type" id="armour_type" onchange="update()">
+        <option value="Cloth armour">Cloth armour</option>
+        <option value="Leather armour">Leather armour</option>
+        <option value="Mail armour">Mail armour</option>
+        <option value="Plate armour">Plate armour</option>
+    </select>
+
+    <br>
+
+    <input type="checkbox" id="ring" onclick="update()" checked /><label for="ring">Ring</label><br>
+    <input type="checkbox" id="cloak" onclick="update()" checked /><label for="cloak">Cloak</label><br>
+    <input type="checkbox" id="trinket" onclick="update()" checked /><label for="trinket">Trinket</label><br>
+
+    <label>Weapon primary attributes:</label><br>
+    <input type="checkbox" id="agility" onclick="update()" checked /><label for="agility">Agility</label><br>
+    <input type="checkbox" id="intellect" onclick="update()" /><label for="intellect">Intellect</label><br>
+    <input type="checkbox" id="strength" onclick="update()" /><label for="strength">Strength</label><br>
+
+    <label>One-hand:</label><br>
+    <input type="checkbox" id="dagger" onclick="update()" /><label for="dagger">Dagger</label><br>
+    <input type="checkbox" id="one_handed_axe" onclick="update()" /><label for="one_handed_axe">One-Handed Axe</label><br>
+    <input type="checkbox" id="one_handed_mace" onclick="update()" /><label for="one_handed_mace">One-Handed Mace</label><br>
+    <input type="checkbox" id="one_handed_sword" onclick="update()" /><label for="one_handed_sword">One-Handed Sword</label><br>
+    <input type="checkbox" id="fist_weapon" onclick="update()" /><label for="fist_weapon">Fist Weapon</label><br>
+    <input type="checkbox" id="wand" onclick="update()" /><label for="wand">Wand</label><br>
+    <input type="checkbox" id="warglaives" onclick="update()" /><label for="warglaives">Warglaives</label><br>
+
+    <label>Two-hand:</label><br>
+    <input type="checkbox" id="polearm" onclick="update()" /><label for="polearm">Polearm</label><br>
+    <input type="checkbox" id="staff" onclick="update()" /><label for="staff">Staff</label><br>
+    <input type="checkbox" id="two_handed_axe" onclick="update()" /><label for="two_handed_axe">Two-Handed Axe</label><br>
+    <input type="checkbox" id="two_handed_mace" onclick="update()" /><label for="two_handed_mace">Two-Handed Mace</label><br>
+    <input type="checkbox" id="two_handed_sword" onclick="update()" /><label for="two_handed_sword">Two-Handed Sword</label><br>
+
+    <label>Ranged:</label><br>
+    <input type="checkbox" id="bow" onclick="update()" /><label for="bow">Bow</label><br>
+    <input type="checkbox" id="crossbow" onclick="update()" /><label for="crossbow">Crossbow</label><br>
+    <input type="checkbox" id="gun" onclick="update()" /><label for="gun">Gun</label><br>
+
+    <label>Off-hand:</label><br>
+    <input type="checkbox" id="shield" onclick="update()" /><label for="shield">Shield</label><br>
+    <input type="checkbox" id="off_hand_frill" onclick="update()" /><label for="off_hand_frill">Off-hand Frill</label><br>
+
 	<table id="table1">
-		<tr>
-			<th>Name</th>
-			<th>Slot</th>
-			<th>Type</th>
-			<th>Source</th>
-			<th>Zone</th>
-			<th>Item link</th>
-			<th>Source link</th>
-			<th>TomTom command</th>
-			<th>Primary attribute</th>
-		</tr>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Slot</th>
+				<th>Type</th>
+				<th>Source</th>
+				<th>Zone</th>
+				<th>TomTom command</th>
+				<th>Primary attribute</th>
+			</tr>
+		</thead>
+		<tbody id="tbody1">
+		</tbody>
 	</table>
+    <p>
+        Notes:	
+        These BfA rares give level 61 items at level 20, can only be looted once, can proc a socket and/or a tertiary stat, but not epic, and are always up (with a short respawn timer).
+    </p>
+    <p>
+        At the same time as travelling around the four BfA zones for rares, loot chests for a level 61 helm from the quest <a href="https://www.wowhead.com/quest=53476/the-great-sea-scrolls">The Great Sea Scrolls</a>.
+    </p>
+    <p>
+		TomTom addon: <a href="https://www.curseforge.com/wow/addons/tomtom">TomTom</a><br>
+		Paste addon: <a href="https://www.curseforge.com/wow/addons/pasteng">Paste</a>
+    </p>
+    <p>
+<a href="https://www.wowhead.com/object=279750/hay-covered-chest">Hay Covered Chest</a> in Tiragarde Sound, which rewards
+<a href="https://www.wowhead.com/item=155571/garyls-riding-blanket">Garyl's Riding Blanket</a>,
+starts with <a href="https://www.wowhead.com/npc=130350/guardian-of-the-spring">Guardian of the Spring</a>.
+Horde players might want to skip this one!	
+    </p>
+Horde can travel to Tiragarde Sound by hopping onto the side of the Relentless from Stormwind Harbour (/way Stormwind City 22.5 55.5); run up from Grom'gol.
+Its the ship that departs in a southerly direction.
+Alliance can travel to Zuldazar on The Golden Skipper from the Echo Isles (/way Echo Isles 71 38)
+    </p>
+    <div id="waypoints">
+    </div>
 </body>
 </html>
