@@ -17,7 +17,7 @@
     <label for="armour_type">Armour type:</label><br>
     <select name="armour_type" id="armour_type" onchange="update()">
         <option value="Cloth armour">Cloth armour</option>
-        <option value="Leather armour">Leather armour</option>
+        <option value="Leather armour" selected >Leather armour</option>
         <option value="Mail armour">Mail armour</option>
         <option value="Plate armour">Plate armour</option>
     </select>
@@ -35,12 +35,12 @@
 
     <label>One-hand:</label><br>
     <input type="checkbox" id="dagger" onclick="update()" /><label for="dagger">Dagger</label><br>
-    <input type="checkbox" id="one_handed_axe" onclick="update()" /><label for="one_handed_axe">One-Handed Axe</label><br>
+    <input type="checkbox" id="one_handed_axe" onclick="update()" checked /><label for="one_handed_axe">One-Handed Axe</label><br>
     <input type="checkbox" id="one_handed_mace" onclick="update()" /><label for="one_handed_mace">One-Handed Mace</label><br>
-    <input type="checkbox" id="one_handed_sword" onclick="update()" /><label for="one_handed_sword">One-Handed Sword</label><br>
-    <input type="checkbox" id="fist_weapon" onclick="update()" /><label for="fist_weapon">Fist Weapon</label><br>
+    <input type="checkbox" id="one_handed_sword" onclick="update()" checked /><label for="one_handed_sword">One-Handed Sword</label><br>
+    <input type="checkbox" id="fist_weapon" onclick="update()" checked /><label for="fist_weapon">Fist Weapon</label><br>
     <input type="checkbox" id="wand" onclick="update()" /><label for="wand">Wand</label><br>
-    <input type="checkbox" id="warglaives" onclick="update()" /><label for="warglaives">Warglaives</label><br>
+    <input type="checkbox" id="warglaives" onclick="update()" checked /><label for="warglaives">Warglaives</label><br>
 
     <label>Two-hand:</label><br>
     <input type="checkbox" id="polearm" onclick="update()" /><label for="polearm">Polearm</label><br>
