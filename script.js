@@ -4,7 +4,6 @@ window.onload = function onLoad()
 }
 
 function update() {
-	alert("Update called");
 	loadJSON("items.json", itemsToTable, 'jsonp');
 }
 
