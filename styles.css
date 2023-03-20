@@ -14,4 +14,5 @@ table {
 	border: 2px solid black;
 	white-space: nowrap;
     text-overflow: clip;
+    font-size: small;
 }
