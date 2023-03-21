@@ -108,6 +108,42 @@
       "primaryAttribute": ""
     },
     {
+      "name": "Sky-Hunter Breeches",
+      "id": 161020,
+      "slot": "Legs",
+      "type": "Cloth armour",
+      "source": "Bramblewing",
+      "zone": "Zuldazar",
+      "itemLink": "https://www.wowhead.com/item=161020",
+      "sourceLink": "https://www.wowhead.com/npc=131718/bramblewing",
+      "tomtomCommand": "/way #862 66.6 32.4 Bramblewing",
+      "primaryAttribute": ""
+    },
+    {
+      "name": "Gusting Axebeak Anklewraps",
+      "id": 161022,
+      "slot": "Feet",
+      "type": "Cloth armour",
+      "source": "Murderbeak",
+      "zone": "Zuldazar",
+      "itemLink": "https://www.wowhead.com/item=161022",
+      "sourceLink": "https://www.wowhead.com/npc=134782/murderbeak",
+      "tomtomCommand": "/way #862 60.6 66.2 Murderbeak",
+      "primaryAttribute": ""
+    },
+    {
+      "name": "Winged Terror Wristwraps",
+      "id": 161018,
+      "slot": "Wrist",
+      "type": "Cloth armour",
+      "source": "Kal'draxa",
+      "zone": "Nazmir",
+      "itemLink": "https://www.wowhead.com/item=161018",
+      "sourceLink": "https://www.wowhead.com/npc=124397/kaldraxa",
+      "tomtomCommand": "/way #863 52.8 13.6 Kal'draxa",
+      "primaryAttribute": ""
+    },
+    {
       "name": "Blue-Ribbon Belt",
       "id": 160463,
       "slot": "Waist",
@@ -264,6 +300,30 @@
       "primaryAttribute": ""
     },
     {
+      "name": "Noxious Crocolisk Trousers",
+      "id": 161028,
+      "slot": "Legs",
+      "type": "Leather armour",
+      "source": "Venomjaw",
+      "zone": "Nazmir",
+      "itemLink": "https://www.wowhead.com/item=161028",
+      "sourceLink": "https://www.wowhead.com/npc=126926/venomjaw",
+      "tomtomCommand": "/way #863 29.8 51.8 Venomjaw",
+      "primaryAttribute": ""
+    },
+    {
+      "name": "Ageless Toxin Grips",
+      "id": 161029,
+      "slot": "Hands",
+      "type": "Leather armour",
+      "source": "Torraske the Eternal",
+      "zone": "Zuldazar",
+      "itemLink": "https://www.wowhead.com/item=161029",
+      "sourceLink": "https://www.wowhead.com/npc=127939/torraske-the-eternal",
+      "tomtomCommand": "/way #862 46.8 65.6 Torraske the Eternal",
+      "primaryAttribute": ""
+    },
+    {
       "name": "Tainted Blood Vambraces",
       "id": 161217,
       "slot": "Wrist",
@@ -372,6 +432,42 @@
       "primaryAttribute": ""
     },
     {
+      "name": "Jolting Leap Legguards",
+      "id": 161033,
+      "slot": "Legs",
+      "type": "Mail armour",
+      "source": "Lei-zhi",
+      "zone": "Zuldazar",
+      "itemLink": "https://www.wowhead.com/item=161033",
+      "sourceLink": "https://www.wowhead.com/npc=131233/lei-zhi",
+      "tomtomCommand": "/way #862 58.8 74.2 Lei-zhi",
+      "primaryAttribute": ""
+    },
+    {
+      "name": "Thundercrash Footguards",
+      "id": 161035,
+      "slot": "Feet",
+      "type": "Mail armour",
+      "source": "Golrakahn",
+      "zone": "Zuldazar",
+      "itemLink": "https://www.wowhead.com/item=161035",
+      "sourceLink": "https://www.wowhead.com/npc=124185/golrakahn",
+      "tomtomCommand": "/way #862 74.0 28.2 Golrakahn",
+      "primaryAttribute": ""
+    },
+    {
+      "name": "Thunderhowl Gauntlets",
+      "id": 161034,
+      "slot": "Hands",
+      "type": "Mail armour",
+      "source": "Avatar of Xolotal",
+      "zone": "",
+      "itemLink": "https://www.wowhead.com/item=161034",
+      "sourceLink": "https://www.wowhead.com/npc=129343/avatar-of-xolotal",
+      "tomtomCommand": "/way #862 49.8 57.6 Avatar of Xolotal",
+      "primaryAttribute": ""
+    },
+    {
       "name": "Barksnapper Girdle",
       "id": 160475,
       "slot": "Waist",
@@ -477,6 +573,54 @@
       "itemLink": "https://www.wowhead.com/item=154376",
       "sourceLink": "https://www.wowhead.com/npc=126621/bonesquall",
       "tomtomCommand": "/way #896 66.6 51.0 Bonesquall",
+      "primaryAttribute": ""
+    },
+    {
+      "name": "Relentless Hydra Legguards",
+      "id": 161043,
+      "slot": "Legs",
+      "type": "Plate armour",
+      "source": "Gahz'ralka",
+      "zone": "Zuldazar",
+      "itemLink": "https://www.wowhead.com/item=161043",
+      "sourceLink": "https://www.wowhead.com/npc=129954/gahzralka",
+      "tomtomCommand": "/way #862 64.4 32.4 Gahz'ralka",
+      "primaryAttribute": ""
+    },
+    {
+      "name": "Gotaka's Wallopers",
+      "id": 161042,
+      "slot": "Hands",
+      "type": "Plate armour",
+      "source": "Atal'zul Gotaka",
+      "zone": "Zuldazar",
+      "itemLink": "https://www.wowhead.com/item=161042",
+      "sourceLink": "https://www.wowhead.com/npc=129961/atalzul-gotaka",
+      "tomtomCommand": "/way #862 81.0 21.6 Atal'zul Gotaka",
+      "primaryAttribute": ""
+    },
+    {
+      "name": "Gutrip's Tramplers",
+      "id": 161041,
+      "slot": "Feet",
+      "type": "Plate armour",
+      "source": "Gutrip",
+      "zone": "Nazmir",
+      "itemLink": "https://www.wowhead.com/item=161041",
+      "sourceLink": "https://www.wowhead.com/npc=128426/gutrip",
+      "tomtomCommand": "/way #863 32.6 43.6 Gutrip",
+      "primaryAttribute": ""
+    },
+    {
+      "name": "Arid Dune Stompers",
+      "id": 161040,
+      "slot": "Feet",
+      "type": "Plate armour",
+      "source": "Warcrawler Karkithiss",
+      "zone": "Zuldazar",
+      "itemLink": "https://www.wowhead.com/item=161040",
+      "sourceLink": "https://www.wowhead.com/npc=133842/warcrawler-karkithiss",
+      "tomtomCommand": "/way #862 44.0 25.6 Warcrawler Karkithiss",
       "primaryAttribute": ""
     },
     {
