@@ -1,5 +1,5 @@
-var testData = 
-[
+/*
+var testData = [
     {
       "name": "Lava-Starched Britches",
       "id": 160457,
@@ -1069,6 +1069,7 @@ var testData =
       "primaryAttribute": "Agility"
     }
 ]
+*/
 
 window.onload = function onLoad()
 {
@@ -1116,11 +1117,6 @@ function itemsToTable(items) {
 			(!document.getElementById("agility").checked && items[i].primaryAttribute == "Agility") ||
 			(!document.getElementById("intellect").checked && items[i].primaryAttribute == "Intellect") ||
 			(!document.getElementById("strength").checked && items[i].primaryAttribute == "Strength")) {
-			//||
-			//(!document.getElementById("ring").checked && items[i].type == "Ring") ||
-            //(!document.getElementById("cloak").checked && items[i].type == "Cloak") ||
-			//(!document.getElementById("trinket").checked && items[i].type == "Trinket") ||
-			//(!document.getElementById("dagger").checked && items[i].type == "Dagger")
 			{ continue; }
 		}
 

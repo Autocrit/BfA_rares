@@ -8,7 +8,9 @@
 	<script type="text/javascript" src="script.js"></script>
 </head>
 <body">
-    <label>Zones:</label><br>
+<h1>BfA rares</h1>
+<h2>Options</h2>
+    <label>Zone:</label><br>
     <input type="checkbox" id="drustvar" onclick="update()" checked /><label for="drustvar">Drustvar</label><br>
     <input type="checkbox" id="nazmir" onclick="update()" checked /><label for="nazmir">Nazmir</label><br>
     <input type="checkbox" id="tiragarde_sound" onclick="update()" checked /><label for="tiragarde_sound">Tiragarde Sound</label><br>
@@ -28,7 +30,7 @@
     <input type="checkbox" id="cloak" onclick="update()" checked /><label for="cloak">Cloak</label><br>
     <input type="checkbox" id="trinket" onclick="update()" checked /><label for="trinket">Trinket</label><br>
 
-    <label>Weapon primary attributes:</label><br>
+	<label>Weapon primary attribute:</label><br>
     <input type="checkbox" id="agility" onclick="update()" checked /><label for="agility">Agility</label><br>
     <input type="checkbox" id="intellect" onclick="update()" /><label for="intellect">Intellect</label><br>
     <input type="checkbox" id="strength" onclick="update()" /><label for="strength">Strength</label><br>
@@ -58,6 +60,7 @@
     <input type="checkbox" id="shield" onclick="update()" /><label for="shield">Shield</label><br>
     <input type="checkbox" id="off_hand_frill" onclick="update()" /><label for="off_hand_frill">Off-hand Frill</label><br>
 
+	<h2>Results</h2>
 	<table id="table1">
 		<thead>
 			<tr>
@@ -73,28 +76,27 @@
 		<tbody id="tbody1">
 		</tbody>
 	</table>
-    <p>
-        Notes:	
+    <h2>Notes</h2>
         These BfA rares give level 61 items at level 20, can only be looted once, can proc a socket and/or a tertiary stat, but not epic, and are always up (with a short respawn timer).
     </p>
     <p>
         At the same time as travelling around the four BfA zones for rares, loot chests for a level 61 helm from the quest <a href="https://www.wowhead.com/quest=53476/the-great-sea-scrolls">The Great Sea Scrolls</a>.
     </p>
     <p>
-		TomTom addon: <a href="https://www.curseforge.com/wow/addons/tomtom">TomTom</a><br>
-		Paste addon: <a href="https://www.curseforge.com/wow/addons/pasteng">Paste</a>
+		<a href="https://www.wowhead.com/object=279750/hay-covered-chest">Hay Covered Chest</a> in Tiragarde Sound, which rewards
+		<a href="https://www.wowhead.com/item=155571/garyls-riding-blanket">Garyl's Riding Blanket</a>,
+		starts with <a href="https://www.wowhead.com/npc=130350/guardian-of-the-spring">Guardian of the Spring</a>.
+		Horde players might want to skip this one!	
+			</p>
+		Horde can travel to Tiragarde Sound by hopping onto the side of the Relentless from Stormwind Harbour (/way Stormwind City 22.5 55.5); run up from Grom'gol.
+		Its the ship that departs in a southerly direction.
+		Alliance can travel to Zuldazar on The Golden Skipper from the Echo Isles (/way Echo Isles 71 38)
     </p>
-    <p>
-<a href="https://www.wowhead.com/object=279750/hay-covered-chest">Hay Covered Chest</a> in Tiragarde Sound, which rewards
-<a href="https://www.wowhead.com/item=155571/garyls-riding-blanket">Garyl's Riding Blanket</a>,
-starts with <a href="https://www.wowhead.com/npc=130350/guardian-of-the-spring">Guardian of the Spring</a>.
-Horde players might want to skip this one!	
-    </p>
-Horde can travel to Tiragarde Sound by hopping onto the side of the Relentless from Stormwind Harbour (/way Stormwind City 22.5 55.5); run up from Grom'gol.
-Its the ship that departs in a southerly direction.
-Alliance can travel to Zuldazar on The Golden Skipper from the Echo Isles (/way Echo Isles 71 38)
-    </p>
-    <div id="waypoints">
+	<h2>TomTom waypoints</h2>
+	<p>
+		These can be copied and pasted into <a href="https://www.curseforge.com/wow/addons/tomtom">TomTom</a> using <a href="https://www.curseforge.com/wow/addons/pasteng">Paste</a>.
+	</p>
+	<div id="waypoints">
     </div>
 </body>
 </html>
