@@ -77,7 +77,7 @@ function itemsToTable(items) {
 			cell = row.insertCell();
 			cell.textContent = items[i].type;
 			cell = row.insertCell();
-			cell.innerHTML = "<a href=\"" + items[i].sourceLink + "\">" +items[i].source + "</a>";
+			cell.innerHTML = "<a href=\"" + items[i].sourceLink + "\">" + items[i].source + "</a>";
 			cell = row.insertCell();
 			cell.textContent = items[i].zone;
 			cell = row.insertCell();

@@ -1,6 +1,6 @@
 html {
 	font-family: "helvetica neue", helvetica, arial, sans-serif;
-    font-size: 14px;
+	font-size: 14px;
 }
 
 body {
@@ -9,14 +9,14 @@ body {
 }
 
 td {
-    border: 1px solid #cccccc;
+	border: 1px solid #cccccc;
 }
 
 table {
 	table-layout: auto;
 	width: 100%;
-    border: 2px  solid black;
+	border: 2px  solid black;
 	border-collapse: collapse;
 	white-space: nowrap;
-    text-overflow: clip;
+	text-overflow: clip;
 }
