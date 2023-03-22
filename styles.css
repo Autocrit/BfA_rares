@@ -1,6 +1,9 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
 html {
-	font-family: "helvetica neue", helvetica, arial, sans-serif;
-	font-size: 14px;
+	/*font-family: "helvetica neue", helvetica, arial, sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+	font-size: 13px;
 }
 
 body {
@@ -8,11 +11,30 @@ body {
 	text-align: left;
 }
 
-td {
+#options label {
+    /*float: left;*/
+	font-weight: 500;
+}
+
+#options ul {
+	margin: 0;
+	list-style: none;
+	/*float: left;*/
+}
+
+.container {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 20px;
+}
+
+td, th {
 	border: 1px solid #cccccc;
 }
 
 table {
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
 	table-layout: auto;
 	width: 100%;
 	border: 2px  solid black;

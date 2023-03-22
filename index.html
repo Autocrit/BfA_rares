@@ -1,110 +1,135 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BfA rares</title>
-	<link rel="stylesheet" href="styles.css">
-	<script type="text/javascript" src="script.js"></script>
-	<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+	<link rel="stylesheet" href="test.css">
+	<script type="text/javascript" src="test.js"></script>
+    <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
 	<script src="https://wow.zamimg.com/js/tooltips.js"></script>
 	<base target="_blank" rel="noopener noreferrer">
 </head>
 <body">
-<h1>Starter gear for level 20s from BfA rares</h1>
-<h2>Options</h2>
-	<label>Zone:</label><br>
-	<input type="checkbox" id="drustvar" onclick="update()" checked /><label for="drustvar">Drustvar</label><br>
-	<input type="checkbox" id="nazmir" onclick="update()" checked /><label for="nazmir">Nazmir</label><br>
-	<input type="checkbox" id="tiragarde_sound" onclick="update()" checked /><label for="tiragarde_sound">Tiragarde Sound</label><br>
-	<input type="checkbox" id="zuldazar" onclick="update()" checked /><label for="zuldazar">Zuldazar</label><br>
+<div>
+    <h1>Starter gear for level 20s from BfA rares</h1>
+</div>
+<div class="container">
+	<div id="options">
+        <h2>Options</h2>
+		<label>Zone</label>
+		<ul>
+			<li><input type="checkbox" id="drustvar" checked onclick="update()"/> Drustvar</li>
+			<li><input type="checkbox" id="nazmir" checked onclick="update()"/> Nazmir</li>
+			<li><input type="checkbox" id="tiragarde_sound" checked onclick="update()"/> Tiragarde Sound</li>
+			<li><input type="checkbox" id="zuldazar" checked onclick="update()"/> Zuldazar</li>
+		</ul>
 
-	<label for="armour_type">Armour type:</label><br>
-    <select name="armour_type" id="armour_type" onchange="update()">
-		<option value="No armour">None</option>
-		<option value="Cloth armour">Cloth armour</option>
-		<option value="Leather armour" selected >Leather armour</option>
-		<option value="Mail armour">Mail armour</option>
-		<option value="Plate armour">Plate armour</option>
-	</select>
+		<label>Armour type</label>
+		<ul>
+			<li><input type="checkbox" id="cloth_armour" onclick="update()"/> Cloth</li>
+			<li><input type="checkbox" id="leather_armour" checked onclick="update()"/> Leather</li>
+			<li><input type="checkbox" id="mail_armour" onclick="update()"/> Mail</li>
+			<li><input type="checkbox" id="plate_armour" onclick="update()"/> Plate</li>
+		</ul>
 
-    <br>
+		<label>Primary attribute</label>
+		<ul>
+			<li><input type="checkbox" id="agility" onclick="update()" checked />Agility</li>
+			<li><input type="checkbox" id="intellect" onclick="update()" />Intellect</li>
+			<li><input type="checkbox" id="strength" onclick="update()" />Strength</li>
+		</ul>
 
-    <input type="checkbox" id="ring" onclick="update()" checked /><label for="ring">Ring</label><br>
-    <input type="checkbox" id="cloak" onclick="update()" checked /><label for="cloak">Cloak</label><br>
-    <input type="checkbox" id="trinket" onclick="update()" checked /><label for="trinket">Trinket</label><br>
+		<label>Slot</label>
+		<ul>
+			<li><input type="checkbox" id="cloak" checked onclick="update()" /> Cloak</li>
+			<li><input type="checkbox" id="wrist" checked onclick="update()"/> Wrist</li>
+			<li><input type="checkbox" id="hands" checked onclick="update()"/> Hands</li>
+			<li><input type="checkbox" id="waist" checked onclick="update()"/> Waist</li>
+			<li><input type="checkbox" id="legs" checked onclick="update()"/> Legs</li>
+			<li><input type="checkbox" id="feet" checked onclick="update()"/> Feet</li>
+			<li><input type="checkbox" id="ring" checked onclick="update()" checked /> Ring</li>
+			<li><input type="checkbox" id="trinket" checked onclick="update()" checked /> Trinket</li>
+		</ul>
 
-	<label>Weapon primary attribute:</label><br>
-    <input type="checkbox" id="agility" onclick="update()" checked /><label for="agility">Agility</label><br>
-    <input type="checkbox" id="intellect" onclick="update()" /><label for="intellect">Intellect</label><br>
-    <input type="checkbox" id="strength" onclick="update()" /><label for="strength">Strength</label><br>
+		<label>One-hand weapon</label>
+		<ul>
+			<li><input type="checkbox" id="dagger" onclick="update()" /> Dagger</li>
+			<li><input type="checkbox" id="one_handed_axe" onclick="update()" checked /> One-Handed Axe</li>
+			<li><input type="checkbox" id="one_handed_mace" onclick="update()" /> One-Handed Mace</li>
+			<li><input type="checkbox" id="one_handed_sword" onclick="update()" checked /> One-Handed Sword</li>
+			<li><input type="checkbox" id="fist_weapon" onclick="update()" checked /> Fist Weapon</li>
+			<li><input type="checkbox" id="wand" onclick="update()" /> Wand</li>
+			<li><input type="checkbox" id="warglaives" onclick="update()" checked /> Warglaives</li>
+		</ul>
 
-    <label>One-hand:</label><br>
-    <input type="checkbox" id="dagger" onclick="update()" /><label for="dagger">Dagger</label><br>
-    <input type="checkbox" id="one_handed_axe" onclick="update()" checked /><label for="one_handed_axe">One-Handed Axe</label><br>
-    <input type="checkbox" id="one_handed_mace" onclick="update()" /><label for="one_handed_mace">One-Handed Mace</label><br>
-    <input type="checkbox" id="one_handed_sword" onclick="update()" checked /><label for="one_handed_sword">One-Handed Sword</label><br>
-    <input type="checkbox" id="fist_weapon" onclick="update()" checked /><label for="fist_weapon">Fist Weapon</label><br>
-    <input type="checkbox" id="wand" onclick="update()" /><label for="wand">Wand</label><br>
-    <input type="checkbox" id="warglaives" onclick="update()" checked /><label for="warglaives">Warglaives</label><br>
+		<label>Two-hand weapon</label>
+		<ul>
+			<li><input type="checkbox" id="polearm" onclick="update()" /> Polearm</li>
+			<li><input type="checkbox" id="staff" onclick="update()" /> Staff</li>
+			<li><input type="checkbox" id="two_handed_axe" onclick="update()" /> Two-Handed Axe</li>
+			<li><input type="checkbox" id="two_handed_mace" onclick="update()" /> Two-Handed Mace</li>
+			<li><input type="checkbox" id="two_handed_sword" onclick="update()" /> Two-Handed Sword</li>
+		</ul>
 
-    <label>Two-hand:</label><br>
-    <input type="checkbox" id="polearm" onclick="update()" /><label for="polearm">Polearm</label><br>
-    <input type="checkbox" id="staff" onclick="update()" /><label for="staff">Staff</label><br>
-    <input type="checkbox" id="two_handed_axe" onclick="update()" /><label for="two_handed_axe">Two-Handed Axe</label><br>
-    <input type="checkbox" id="two_handed_mace" onclick="update()" /><label for="two_handed_mace">Two-Handed Mace</label><br>
-    <input type="checkbox" id="two_handed_sword" onclick="update()" /><label for="two_handed_sword">Two-Handed Sword</label><br>
+		<label>Ranged weapon</label>
+		<ul>
+			<li><input type="checkbox" id="bow" onclick="update()" /> Bow</li>
+			<li><input type="checkbox" id="crossbow" onclick="update()" /> Crossbow</li>
+			<li><input type="checkbox" id="gun" onclick="update()" /> Gun</li>
+		</ul>
 
-    <label>Ranged:</label><br>
-    <input type="checkbox" id="bow" onclick="update()" /><label for="bow">Bow</label><br>
-    <input type="checkbox" id="crossbow" onclick="update()" /><label for="crossbow">Crossbow</label><br>
-    <input type="checkbox" id="gun" onclick="update()" /><label for="gun">Gun</label><br>
-
-    <label>Off-hand:</label><br>
-    <input type="checkbox" id="shield" onclick="update()" /><label for="shield">Shield</label><br>
-    <input type="checkbox" id="off_hand_frill" onclick="update()" /><label for="off_hand_frill">Off-hand Frill</label><br>
-
-	<h2>Results</h2>
-	<table id="table1">
-		<thead>
-			<tr>
-				<th>Name</th>
-				<th>Slot</th>
-				<th>Type</th>
-				<th>Source</th>
-				<th>Zone</th>
-				<th>TomTom command</th>
-				<th>Primary attribute</th>
-			</tr>
-		</thead>
-		<tbody id="tbody1">
-		</tbody>
-	</table>
-    <h2>Notes</h2>
-        These BfA rares give level 61 items at level 20, can only be looted once, can proc a socket and/or a tertiary stat, but not epic,
-		and are always up (with a short respawn timer).
-    </p>
-    <p>
-        At the same time as travelling around the four BfA zones, you can loot chests for a level 61 helm from the quest
-		<a href="https://www.wowhead.com/quest=53476/the-great-sea-scrolls">The Great Sea Scrolls</a>.
-    </p>
-    <p>
-		<a href="https://www.wowhead.com/object=279750/hay-covered-chest">Hay Covered Chest</a> in Tiragarde Sound, which rewards
-		<a href="https://www.wowhead.com/item=155571/garyls-riding-blanket">Garyl's Riding Blanket</a>,
-		starts with <a href="https://www.wowhead.com/npc=130350/guardian-of-the-spring">Guardian of the Spring</a>.
-		Horde players might want to skip this one!	
-			</p>
-		Horde can travel to Tiragarde Sound by hopping on to the side of the Relentless from Stormwind Harbour; run up from Grom'gol.
-		Its the boat that docks and departs heading south, from the most southerly dock (/way Stormwind City 22.5 55.5).<br>
-		Alliance can travel to Zuldazar on The Golden Skipper from the Echo Isles; run from Ratchet (/way Echo Isles 71 38).
-    </p>
-	<p>All data is taken from Wowhead.</p>
-	<h2>TomTom waypoints</h2>
-	<p>
-		These can be copied and pasted into <a href="https://www.curseforge.com/wow/addons/tomtom">TomTom</a> using
-		<a href="https://www.curseforge.com/wow/addons/pasteng">Paste</a>.
-	</p>
-	<div id="waypoints">
+		<label>Off-hand</label>
+		<ul>
+			<li><input type="checkbox" id="shield" onclick="update()" /> Shield</li>
+			<li><input type="checkbox" id="off_hand_frill" onclick="update()" /> Off-hand Frill</li>
+		</ul>
 	</div>
+	<div>
+        <h2>Results</h2>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Slot</th>
+					<th>Type</th>
+					<th>Source</th>
+					<th>Zone</th>
+					<th>TomTom command</th>
+					<th>Primary attribute</th>
+				</tr>
+			</thead>
+			<tbody id="tbody1">
+			</tbody>
+		</table>
+        
+	</div>
+</div>
+<div>
+    <h2>Notes</h2>
+    These BfA rares give level 61 items at level 20, can only be looted once, can proc a socket and/or a tertiary stat, but not epic,
+    and are always up (with a short respawn timer).
+</p>
+<p>
+    At the same time as travelling around the four BfA zones, you can loot chests for a level 61 helm from the quest
+    <a href="https://www.wowhead.com/quest=53476/the-great-sea-scrolls">The Great Sea Scrolls</a>.
+</p>
+<p>
+    <a href="https://www.wowhead.com/object=279750/hay-covered-chest">Hay Covered Chest</a> in Tiragarde Sound, which rewards
+    <a href="https://www.wowhead.com/item=155571/garyls-riding-blanket">Garyl's Riding Blanket</a>,
+    starts with <a href="https://www.wowhead.com/npc=130350/guardian-of-the-spring">Guardian of the Spring</a>.
+    Horde players might want to skip this one!	
+        </p>
+    Horde can travel to Tiragarde Sound by hopping on to the side of the Relentless from Stormwind Harbour; run up from Grom'gol.
+    Its the boat that docks and departs heading south, from the most southerly dock (/way Stormwind City 22.5 55.5).<br>
+    Alliance can travel to Zuldazar on The Golden Skipper from the Echo Isles; run from Ratchet (/way Echo Isles 71 38).
+</p>
+<p>All data is taken from Wowhead.</p>
+<h2>TomTom waypoints</h2>
+<p>
+    These can be copied and pasted into <a href="https://www.curseforge.com/wow/addons/tomtom">TomTom</a> using
+    <a href="https://www.curseforge.com/wow/addons/pasteng">Paste</a>.
+</p>
+    <div id="waypoints"></div>
+</div>
 </body>
 </html>
