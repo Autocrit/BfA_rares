@@ -35,6 +35,9 @@ function itemsToTable(items) {
 		tbody.removeChild(tbody.lastChild);
 	}
 
+    // Clear waypoints
+    document.getElementById("waypoints").innerHTML = "";
+
 	for(var i=0; i<items.length; i++) {
 		// Eliminate if zone or primary attribute doesn't match
 		if((!document.getElementById("drustvar").checked && items[i].zone == "Drustvar") || 
@@ -92,6 +95,6 @@ function itemsToTable(items) {
         cell = row.insertCell();
         cell.textContent = items[i].primaryAttribute;
 
-        document.getElementById("waypoints").innerHTML += items[i].tomtomCommand + "<br>"
+        document.getElementById("waypoints").innerHTML += items[i].tomtomCommand + "<br>";
 	}
 }
