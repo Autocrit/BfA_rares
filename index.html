@@ -5,88 +5,103 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BfA rares</title>
 	<link rel="stylesheet" href="styles.css?v=2.1">
-	<script src="script.js?v=2.1"></script>
+	<script src="script.js?v=3"></script>
     <script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
 	<script src="https://wow.zamimg.com/js/tooltips.js"></script>
-	<base target="_blank" rel="noopener noreferrer">
 </head>
 <body>
 <div>
-    <h1>Starter gear for level 20s from BfA rares</h1>
+	<h1>Starter gear for level 20s from BfA rares</h1>
 </div>
 <div class="container">
 	<div class="column">
-        <h2>Options</h2>
+		<h2>Options</h2>
 		<label>Zone</label>
 		<ul>
-			<li><input type="checkbox" id="drustvar" checked onclick="update()"> Drustvar</li>
-			<li><input type="checkbox" id="nazmir" checked onclick="update()"> Nazmir</li>
-			<li><input type="checkbox" id="tiragarde_sound" checked onclick="update()"> Tiragarde Sound</li>
-			<li><input type="checkbox" id="zuldazar" checked onclick="update()"> Zuldazar</li>
+			<li><input type="checkbox" id="drustvar" checked onclick="updateItems()"> Drustvar</li>
+			<li><input type="checkbox" id="nazmir" checked onclick="updateItems()"> Nazmir</li>
+			<li><input type="checkbox" id="tiragarde_sound" checked onclick="updateItems()"> Tiragarde Sound</li>
+			<li><input type="checkbox" id="zuldazar" checked onclick="updateItems()"> Zuldazar</li>
+		</ul>
+
+		<label>Class preset</label>
+		<ul>
+			<li><input type="radio" name="class_preset" value="Death Knight" checked onclick="updateClass()"> Death Knight</li>
+			<li><input type="radio" name="class_preset" value="Demon Hunter" onclick="updateClass()"> Demon Hunter</li>
+			<li><input type="radio" name="class_preset" value="Druid" onclick="updateClass()"> Druid</li>
+			<li><input type="radio" name="class_preset" value="Hunter" onclick="updateClass()"> Hunter</li>
+			<li><input type="radio" name="class_preset" value="Mage" onclick="updateClass()"> Mage</li>
+			<li><input type="radio" name="class_preset" value="Monk" onclick="updateClass()"> Monk</li>
+			<li><input type="radio" name="class_preset" value="Paladin" onclick="updateClass()"> Paladin</li>
+			<li><input type="radio" name="class_preset" value="Priest" onclick="updateClass()"> Priest</li>
+			<li><input type="radio" name="class_preset" value="Rogue" onclick="updateClass()"> Rogue</li>
+			<li><input type="radio" name="class_preset" value="Shaman" onclick="updateClass()"> Shaman</li>
+			<li><input type="radio" name="class_preset" value="Warlock" onclick="updateClass()"> Warlock</li>
+			<li><input type="radio" name="class_preset" value="Warrior" onclick="updateClass()"> Warrior</li>
 		</ul>
 
 		<label>Armour type</label>
 		<ul>
-			<li><input type="checkbox" id="cloth_armour" onclick="update()"> Cloth</li>
-			<li><input type="checkbox" id="leather_armour" checked onclick="update()"> Leather</li>
-			<li><input type="checkbox" id="mail_armour" onclick="update()"> Mail</li>
-			<li><input type="checkbox" id="plate_armour" onclick="update()"> Plate</li>
+			<li><input type="radio" name="armour_type" id="cloth_armour" onclick="updateItems()"> Cloth</li>
+			<li><input type="radio" name="armour_type" id="leather_armour" onclick="updateItems()"> Leather</li>
+			<li><input type="radio" name="armour_type" id="mail_armour" onclick="updateItems()"> Mail</li>
+			<li><input type="radio" name="armour_type" id="plate_armour" onclick="updateItems()"> Plate</li>
 		</ul>
 
 		<label>Primary attribute</label>
 		<ul>
-			<li><input type="checkbox" id="agility" onclick="update()" checked>Agility</li>
-			<li><input type="checkbox" id="intellect" onclick="update()">Intellect</li>
-			<li><input type="checkbox" id="strength" onclick="update()">Strength</li>
+			<li><input type="checkbox" id="agility" onclick="updateItems()">Agility</li>
+			<li><input type="checkbox" id="intellect" onclick="updateItems()">Intellect</li>
+			<li><input type="checkbox" id="strength" onclick="updateItems()">Strength</li>
 		</ul>
 
 		<label>Slot</label>
 		<ul>
-			<li><input type="checkbox" id="cloak" checked onclick="update()"> Cloak</li>
-			<li><input type="checkbox" id="wrist" checked onclick="update()"> Wrist</li>
-			<li><input type="checkbox" id="hands" checked onclick="update()"> Hands</li>
-			<li><input type="checkbox" id="waist" checked onclick="update()"> Waist</li>
-			<li><input type="checkbox" id="legs" checked onclick="update()"> Legs</li>
-			<li><input type="checkbox" id="feet" checked onclick="update()"> Feet</li>
-			<li><input type="checkbox" id="ring" checked onclick="update()"> Ring</li>
-			<li><input type="checkbox" id="trinket" checked onclick="update()"> Trinket</li>
+			<li><input type="checkbox" id="cloak" checked onclick="updateItems()"> Cloak</li>
+			<li><input type="checkbox" id="wrist" checked onclick="updateItems()"> Wrist</li>
+			<li><input type="checkbox" id="hands" checked onclick="updateItems()"> Hands</li>
+			<li><input type="checkbox" id="waist" checked onclick="updateItems()"> Waist</li>
+			<li><input type="checkbox" id="legs" checked onclick="updateItems()"> Legs</li>
+			<li><input type="checkbox" id="feet" checked onclick="updateItems()"> Feet</li>
+			<li><input type="checkbox" id="ring" checked onclick="updateItems()"> Ring</li>
+			<li><input type="checkbox" id="trinket" checked onclick="updateItems()"> Trinket</li>
 		</ul>
 
 		<label>One-hand weapon</label>
 		<ul>
-			<li><input type="checkbox" id="dagger" onclick="update()"> Dagger</li>
-			<li><input type="checkbox" id="one_handed_axe" onclick="update()" checked> One-Handed Axe</li>
-			<li><input type="checkbox" id="one_handed_mace" onclick="update()"> One-Handed Mace</li>
-			<li><input type="checkbox" id="one_handed_sword" onclick="update()" checked> One-Handed Sword</li>
-			<li><input type="checkbox" id="fist_weapon" onclick="update()" checked> Fist Weapon</li>
-			<li><input type="checkbox" id="wand" onclick="update()"> Wand</li>
-			<li><input type="checkbox" id="warglaives" onclick="update()" checked> Warglaives</li>
+			<li><input type="checkbox" id="dagger" onclick="updateItems()"> Dagger</li>
+			<li><input type="checkbox" id="one_handed_axe" onclick="updateItems()"> One-Handed Axe</li>
+			<li><input type="checkbox" id="one_handed_mace" onclick="updateItems()"> One-Handed Mace</li>
+			<li><input type="checkbox" id="one_handed_sword" onclick="updateItems()"> One-Handed Sword</li>
+			<li><input type="checkbox" id="fist_weapon" onclick="updateItems()"> Fist Weapon</li>
+			<li><input type="checkbox" id="wand" onclick="updateItems()"> Wand</li>
+			<li><input type="checkbox" id="warglaives" onclick="updateItems()"> Warglaives</li>
 		</ul>
 
 		<label>Two-hand weapon</label>
 		<ul>
-			<li><input type="checkbox" id="polearm" onclick="update()"> Polearm</li>
-			<li><input type="checkbox" id="staff" onclick="update()"> Staff</li>
-			<li><input type="checkbox" id="two_handed_axe" onclick="update()"> Two-Handed Axe</li>
-			<li><input type="checkbox" id="two_handed_mace" onclick="update()"> Two-Handed Mace</li>
-			<li><input type="checkbox" id="two_handed_sword" onclick="update()"> Two-Handed Sword</li>
+			<li><input type="checkbox" id="polearm" onclick="updateItems()"> Polearm</li>
+			<li><input type="checkbox" id="staff" onclick="updateItems()"> Staff</li>
+			<li><input type="checkbox" id="two_handed_axe" onclick="updateItems()"> Two-Handed Axe</li>
+			<li><input type="checkbox" id="two_handed_mace" onclick="updateItems()"> Two-Handed Mace</li>
+			<li><input type="checkbox" id="two_handed_sword" onclick="updateItems()"> Two-Handed Sword</li>
 		</ul>
 
 		<label>Ranged weapon</label>
 		<ul>
-			<li><input type="checkbox" id="bow" onclick="update()"> Bow</li>
-			<li><input type="checkbox" id="crossbow" onclick="update()"> Crossbow</li>
-			<li><input type="checkbox" id="gun" onclick="update()"> Gun</li>
+			<li><input type="checkbox" id="bow" onclick="updateItems()"> Bow</li>
+			<li><input type="checkbox" id="crossbow" onclick="updateItems()"> Crossbow</li>
+			<li><input type="checkbox" id="gun" onclick="updateItems()"> Gun</li>
 		</ul>
 
 		<label>Off-hand</label>
 		<ul>
-			<li><input type="checkbox" id="shield" onclick="update()"> Shield</li>
-			<li><input type="checkbox" id="off_hand_frill" onclick="update()"> Off-hand Frill</li>
+			<li><input type="checkbox" id="shield" onclick="updateItems()"> Shield</li>
+			<li><input type="checkbox" id="off_hand_frill" onclick="updateItems()"> Off-hand Frill</li>
 		</ul>
 	</div>
 	<div class="column">
-        <h2>Results</h2>
+		<h2>Results</h2>
 		<table>
 			<thead>
 				<tr>
@@ -102,7 +117,6 @@
 			<tbody id="tbody1">
 			</tbody>
 		</table>
-        
 	</div>
 </div>
 <div>
