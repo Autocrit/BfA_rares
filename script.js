@@ -1515,8 +1515,8 @@ function updateClass() {
 				document.getElementById("shield").checked = true;
 			if(classes[i].off_hand_frill)
 				document.getElementById("off_hand_frill").checked = true;
-        }
-    }
+		}
+	}
 
 	updateItems();
 }
