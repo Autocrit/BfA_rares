@@ -1,4 +1,4 @@
-	const items = [
+const items = [
 	{
 		"name": "Lava-Starched Britches",
 		"id": 160457,
