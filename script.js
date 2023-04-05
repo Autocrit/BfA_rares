@@ -1103,7 +1103,6 @@ const items = [
 		"tomtomCommand": "/way #896 33.0 57.0 Sister Martha",
 		"primaryAttribute": "Intellect"
 	},
-	/*
 	{
 		"name": "Wickerbeast Mulcher",
 		"id": 155362,
@@ -1114,9 +1113,9 @@ const items = [
 		"itemLink": "https://www.wowhead.com/item=155362",
 		"sourceLink": "https://www.wowhead.com/npc=138618/haywire-golem",
 		"tomtomCommand": "/way #896 23.8 29.4 Haywire Golem",
-		"primaryAttribute": "Agility"
+		"primaryAttribute": "Agility",
+		"exclude": true
 	},
-	*/
 	{
 		"name": "Pirate Chief's Speargun",
 		"id": 155422,
@@ -1408,7 +1407,8 @@ function updateItems() {
 			(!document.getElementById("crossbow").checked && items[i].type == "Crossbow") ||
 			(!document.getElementById("gun").checked && items[i].type == "Gun") ||
 			(!document.getElementById("shield").checked && items[i].type == "Shield") ||
-			(!document.getElementById("off_hand_frill").checked && items[i].type == "Off-hand Frill")) {
+			(!document.getElementById("off_hand_frill").checked && items[i].type == "Off-hand Frill") ||
+			(items[i].exclude)) {
 			{ continue; }
 		}
             
