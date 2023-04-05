@@ -1410,7 +1410,7 @@ function updateItems() {
 			(!document.getElementById("shield").checked && items[i].type == "Shield") ||
 			(!document.getElementById("off_hand_frill").checked && items[i].type == "Off-hand Frill") ||
 			(items[i].exclude)) {
-			{ continue; }
+				continue;
 		}
             
 		var row = tbody.insertRow();
