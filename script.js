@@ -1103,6 +1103,7 @@ const items = [
 		"tomtomCommand": "/way #896 33.0 57.0 Sister Martha",
 		"primaryAttribute": "Intellect"
 	},
+	/*
 	{
 		"name": "Wickerbeast Mulcher",
 		"id": 155362,
@@ -1115,6 +1116,7 @@ const items = [
 		"tomtomCommand": "/way #896 23.8 29.4 Haywire Golem",
 		"primaryAttribute": "Agility"
 	},
+	*/
 	{
 		"name": "Pirate Chief's Speargun",
 		"id": 155422,
