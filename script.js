@@ -1279,7 +1279,8 @@ const classes = [
 		"one_handed_sword": true,
 		"fist_weapon": true,
 		"polearm": true,
-		"staff": true
+		"staff": true,
+		"off_hand_frill": true
 	},
 	{
 		"class": "Paladin",
