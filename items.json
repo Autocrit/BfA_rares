@@ -1223,5 +1223,17 @@
 		"sourceLink": "https://www.wowhead.com/npc=127877/longfang",
 		"tomtomCommand": "/way #896 59.4 55.2 Longfang",
 		"primaryAttribute": "Agility"
+	},
+	{
+		"name": "Amani Berserker's Chopper",
+		"id": 160947,
+		"slot": "One-Hand",
+		"type": "One-Handed Axe",
+		"source": "Kul'krazahn",
+		"zone": "Zuldazar",
+		"itemLink": "https://www.wowhead.com/item=160947",
+		"sourceLink": "https://www.wowhead.com/npc=120899/kulkrazahn",
+		"tomtomCommand": "/way #1165 55.0 83.6 Kul'krazahn",
+		"primaryAttribute": "Agility"
 	}
 ]
