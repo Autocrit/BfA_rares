@@ -1,30 +1,22 @@
-@import url('https://fonts.cdnfonts.com/css/poppins');
-
-html {
-	/*font-family: "helvetica neue", helvetica, arial, sans-serif;*/
-    font-family: 'Poppins', sans-serif;
-	font-size: 14px;
-}
-
 body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 14px;
 	margin: 5px;
 	text-align: left;
 }
 
 .column {
-    border:1px solid #bbbbbb;
-    padding: 4px;
+	border:1px solid #bbbbbb;
+	padding: 4px;
 }
 
 .column label {
-    /*float: left;*/
 	font-weight: 500;
 }
 
 .column ul {
 	margin: 0;
 	list-style: none;
-	/*float: left;*/
 }
 
 .container {
@@ -34,8 +26,8 @@ body {
 }
 
 th {
-    border-bottom: 1px solid #cccccc;
-    background-color: #ececec;
+	border-bottom: 1px solid #cccccc;
+	background-color: #ececec;
 }
 
 td, th {
@@ -44,37 +36,27 @@ td, th {
 }
 
 table {
-	font-family: 'Poppins', sans-serif;
-	font-size: 14px;
 	table-layout: auto;
 	width: 100%;
-	/*border: 3px solid #cccccc;*/
 	border-collapse: collapse;
-	/*white-space: nowrap;
-	text-overflow: clip;*/
 }
 
 tr:nth-child(even) {
-    background-color: #ececec;
+	background-color: #ececec;
 }
 
 table tr:first-child td {
-    border-top: 0;
+	border-top: 0;
 }
 
 table tr td:first-child {
-    border-left: 0;
+	border-left: 0;
 }
 
 table tr:last-child td {
-    border-bottom: 1px solid #ececec;
+	border-bottom: 1px solid #ececec;
 }
 
 table tr td:last-child {
-    border-right: 0;
+	border-right: 0;
 }
-/*
-tr:last-child {
-    border-bottom: 1px solid #ececec;
-}
-*/
