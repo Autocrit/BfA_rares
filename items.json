@@ -1211,5 +1211,17 @@
 		"sourceLink": "https://www.wowhead.com/npc=133373/jaxteb-the-reanimated",
 		"tomtomCommand": "/way #863 45.6 52.6 Jax'teb the Reanimated",
 		"primaryAttribute": "Agility"
+	},
+	{
+		"name": "Long Fang",
+		"id": 159518,
+		"slot": "One-Hand",
+		"type": "Dagger",
+		"source": "Longfang",
+		"zone": "Drustvar",
+		"itemLink": "https://www.wowhead.com/item=159518",
+		"sourceLink": "https://www.wowhead.com/npc=127877/longfang",
+		"tomtomCommand": "/way #896 59.4 55.2 Longfang",
+		"primaryAttribute": "Agility"
 	}
 ]
