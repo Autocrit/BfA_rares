@@ -1,0 +1,140 @@
+[
+	{
+		"class": "Death Knight",
+		"plate": true,
+		"strength": true,
+		"one_handed_axe": true,
+		"one_handed_mace": true,
+		"one_handed_sword": true,
+		"polearm": true,
+		"two_handed_axe": true,
+		"two_handed_mace": true,
+		"two_handed_sword": true
+	},
+	{
+		"class": "Demon Hunter",
+		"leather": true,
+		"agility": true,
+		"one_handed_axe": true,
+		"one_handed_sword": true,
+		"fist_weapon": true,
+		"warglaives": true
+	},
+	{
+		"class": "Druid",
+		"leather": true,
+		"agility": true,
+		"intellect": true,
+		"dagger": true,
+		"one_handed_mace": true,
+		"fist_weapon": true,
+		"polearm": true,
+		"staff": true,
+		"two_handed_mace": true,
+		"off_hand_frill": true
+	},
+	{
+		"class": "Hunter",
+		"mail": true,
+		"agility": true,
+		"bow": true,
+		"crossbow": true,
+		"gun": true,
+		"polearm": true,
+		"staff": true
+	},
+	{
+		"class": "Mage",
+		"cloth": true,
+		"intellect": true,
+		"dagger": true,
+		"one_handed_sword": true,
+		"wand": true,
+		"staff": true,
+		"off_hand_frill": true
+	},
+	{
+		"class": "Monk",
+		"leather": true,
+		"agility": true,
+		"intellect": true,
+		"one_handed_axe": true,
+		"one_handed_mace": true,
+		"one_handed_sword": true,
+		"fist_weapon": true,
+		"polearm": true,
+		"staff": true,
+		"off_hand_frill": true
+	},
+	{
+		"class": "Paladin",
+		"plate": true,
+		"intellect": true,
+		"strength": true,
+		"one_handed_axe": true,
+		"one_handed_mace": true,
+		"one_handed_sword": true,
+		"polearm": true,
+		"two_handed_axe": true,
+		"two_handed_mace": true,
+		"two_handed_sword": true,
+		"shield": true
+	},
+	{
+		"class": "Priest",
+		"cloth": true,
+		"intellect": true,
+		"dagger": true,
+		"one_handed_mace": true,
+		"wand": true,
+		"staff": true,
+		"off_hand_frill": true
+	},
+	{
+		"class": "Rogue",
+		"leather": true,
+		"agility": true,
+		"dagger": true,
+		"one_handed_axe": true,
+		"one_handed_mace": true,
+		"one_handed_sword": true,
+		"fist_weapon": true
+	},
+	{
+		"class": "Shaman",
+		"mail": true,
+		"agility": true,
+		"intellect": true,
+		"dagger": true,
+		"one_handed_axe": true,
+		"one_handed_mace": true,
+		"fist_weapon": true,
+		"staff": true,
+		"two_handed_axe": true,
+		"two_handed_mace": true,
+		"shield": true
+	},
+	{
+		"class": "Warlock",
+		"cloth": true,
+		"intellect": true,
+		"dagger": true,
+		"one_handed_sword": true,
+		"wand": true,
+		"staff": true,
+		"off_hand_frill": true
+	},
+	{
+		"class": "Warrior",
+		"plate": true,
+		"strength": true,
+		"one_handed_axe": true,
+		"one_handed_mace": true,
+		"one_handed_sword": true,
+		"polearm": true,
+		"two_handed_axe": true,
+		"two_handed_mace": true,
+		"two_handed_sword": true,
+		"shield": true
+	}
+]
