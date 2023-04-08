@@ -3,26 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>BfA rares</title>
+	<title>Gear drops from BfA (Battle for Azeroth) non-elite rares</title>
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
-	<script src="script.js"></script>
-	<script>const whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+	<script>const whTooltips = {colorLinks: false, iconizeLinks: true, renameLinks: true};</script>
 	<script src="https://wow.zamimg.com/js/tooltips.js"></script>
+	<script src="script.js"></script>
 </head>
 <body>
 <div>
-	<h1>Starter gear for level 20s from BfA rares</h1>
+	<h1>Gear drops from BfA (Battle for Azeroth) rares</h1>
 </div>
 <div class="container">
 	<div class="column">
 		<h2>Options</h2>
 		<label>Zone</label>
 		<ul>
-			<li><input type="checkbox" id="drustvar" checked onclick="updateItems()"> Drustvar</li>
-			<li><input type="checkbox" id="nazmir" checked onclick="updateItems()"> Nazmir</li>
-			<li><input type="checkbox" id="tiragarde_sound" checked onclick="updateItems()"> Tiragarde Sound</li>
-			<li><input type="checkbox" id="zuldazar" checked onclick="updateItems()"> Zuldazar</li>
+			<li><input type="checkbox" id="tiragarde_sound" checked onclick="updateItems()"> Tiragarde Sound (10-60)</li>
+			<li><input type="checkbox" id="zuldazar" checked onclick="updateItems()"> Zuldazar (10-60)</li>
+			<li><input type="checkbox" id="drustvar" checked onclick="updateItems()"> Drustvar (20-60)</li>
+			<li><input type="checkbox" id="nazmir" checked onclick="updateItems()"> Nazmir (20-60)</li>
+			<li><input type="checkbox" id="stormsong_valley" onclick="updateItems()"> Stormsong Valley (30-60)</li>
+			<li><input type="checkbox" id="vol_dun" onclick="updateItems()"> Vol'dun (30-60)</li>
 		</ul>
 
 		<label>Class preset</label>
@@ -41,12 +43,12 @@
 			<li><input type="radio" name="class_preset" value="Warrior" onclick="updateClass()"> Warrior</li>
 		</ul>
 
-		<label>Armour type</label>
+		<label>Armor type</label>
 		<ul>
-			<li><input type="radio" name="armour_type" id="cloth_armour" onclick="updateItems()"> Cloth</li>
-			<li><input type="radio" name="armour_type" id="leather_armour" onclick="updateItems()"> Leather</li>
-			<li><input type="radio" name="armour_type" id="mail_armour" onclick="updateItems()"> Mail</li>
-			<li><input type="radio" name="armour_type" id="plate_armour" onclick="updateItems()"> Plate</li>
+			<li><input type="radio" name="armor_type" id="cloth_armor" onclick="updateItems()"> Cloth</li>
+			<li><input type="radio" name="armor_type" id="leather_armor" onclick="updateItems()"> Leather</li>
+			<li><input type="radio" name="armor_type" id="mail_armor" onclick="updateItems()"> Mail</li>
+			<li><input type="radio" name="armor_type" id="plate_armor" onclick="updateItems()"> Plate</li>
 		</ul>
 
 		<label>Primary attribute</label>
@@ -58,13 +60,13 @@
 
 		<label>Slot</label>
 		<ul>
-			<li><input type="checkbox" id="cloak" checked onclick="updateItems()"> Cloak</li>
 			<li><input type="checkbox" id="wrist" checked onclick="updateItems()"> Wrist</li>
 			<li><input type="checkbox" id="hands" checked onclick="updateItems()"> Hands</li>
 			<li><input type="checkbox" id="waist" checked onclick="updateItems()"> Waist</li>
 			<li><input type="checkbox" id="legs" checked onclick="updateItems()"> Legs</li>
 			<li><input type="checkbox" id="feet" checked onclick="updateItems()"> Feet</li>
-			<li><input type="checkbox" id="ring" checked onclick="updateItems()"> Ring</li>
+			<li><input type="checkbox" id="back" checked onclick="updateItems()"> Back</li>
+			<li><input type="checkbox" id="finger" checked onclick="updateItems()"> Finger</li>
 			<li><input type="checkbox" id="trinket" checked onclick="updateItems()"> Trinket</li>
 		</ul>
 
@@ -103,7 +105,7 @@
 	</div>
 	<div class="column">
 		<h2>Results</h2>
-		<table>
+		<table class="results">
 			<thead>
 				<tr>
 					<th>Name</th>
@@ -115,7 +117,7 @@
 					<th>Primary attribute</th>
 				</tr>
 			</thead>
-			<tbody id="tbody1">
+			<tbody id="table_contents">
 			</tbody>
 		</table>
 	</div>
@@ -124,14 +126,18 @@
 	<h2>Notes</h2>
 	<ul>
 		<li>
-			These BfA, non-elite rares give level 61 items at level 20, can only be looted once, can proc a socket and/or a tertiary stat, but not epic,
-			and are always up (with a short respawn timer).
+			This is a work in progress (<a href="https://xpoff.com/threads/starter-gear-from-bfa-rares.99155/">XPOff thread</a>
+			for feedback).
+		</li>
+		<li>
+			These are  non-elite rares, and non-Azerite gear drops. At level 20 the items are level 61, can only be looted once,
+			can proc a socket and/or a tertiary stat.
 		</li>
 		<li>
 			At the same time as travelling around the four BfA zones, you can loot chests for a level 61 helm from the quest
-			<a href="https://www.wowhead.com/quest=53476/the-great-sea-scrolls"></a>. Also get the 28 slot bag
+			<a href="https://www.wowhead.com/quest=53476/the-great-sea-scrolls"></a>. You can also get the 28 slot bag
 			<a href="https://www.wowhead.com/item=160452/goats-tote"></a> from
-			<a href="https://www.wowhead.com/npc=132076/totes"></a> (/way #895 46.8 20.6 Totes).
+			<a href="https://www.wowhead.com/npc=132076/totes"></a> (<i>/way #895 46.8 20.6 Totes</i>).
 		</li>
 		<li>
 			<a href="https://www.wowhead.com/object=279750/hay-covered-chest"></a> in Tiragarde Sound, which rewards
@@ -147,14 +153,14 @@
 		</li>
 		<li>
 			Horde can travel to Tiragarde Sound by hopping on to the side of the Relentless from Stormwind Harbour; run up from Grom'gol.
-			Its the boat that docks and departs heading south, from the most southerly dock (/way Stormwind City 22.5 55.5).
-			Set your heathstone to Castaway point (/way #895 85.2 80.4 Friendly Pete) if you want to return easily.
+			Its the boat that docks and departs heading south, from the most southerly dock (<i>/way Stormwind City 22.5 55.5)</i>.
+			Set your heathstone to Castaway point (<i>/way #895 85.2 80.4 Friendly Pete</i>) if you want to return easily.
 		</li>
 		<li>
-			Alliance can travel to Zuldazar on The Golden Skipper from the Echo Isles; run from Ratchet (/way Echo Isles 71 38).
+			Alliance can travel to Zuldazar on The Golden Skipper from the Echo Isles; run/swim from Ratchet (<i>/way #463 70.6 38.2 Mith'aka</i>).
 		</li>
 		<li>
-			Having <a href="https://www.wowhead.com/item=109076/goblin-glider-kit"></a> or
+			<a href="https://www.wowhead.com/item=109076/goblin-glider-kit"></a> or
 			<a href="https://www.wowhead.com/spell=126392/goblin-glider"></a> is  useful for gettings around 
 			these zones.
 		</li>

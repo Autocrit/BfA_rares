@@ -17,6 +17,7 @@ body {
 .column ul {
 	margin: 0;
 	list-style: none;
+	padding-left: 1em;
 }
 
 .container {
@@ -25,38 +26,38 @@ body {
 	column-gap: 4px;
 }
 
-th {
+table.results th {
 	border-bottom: 1px solid #cccccc;
 	background-color: #ececec;
 }
 
-td, th {
+table.results td, th {
     border-left: 1px solid #cccccc;
     border-right: 1px solid #cccccc;
 }
 
-table {
+table.results {
 	table-layout: auto;
 	width: 100%;
 	border-collapse: collapse;
 }
 
-tr:nth-child(even) {
+table.results tr:nth-child(even) {
 	background-color: #ececec;
 }
 
-table tr:first-child td {
+table.results tr:first-child td {
 	border-top: 0;
 }
 
-table tr td:first-child {
+table.results tr td:first-child {
 	border-left: 0;
 }
 
-table tr:last-child td {
+table.results tr:last-child td {
 	border-bottom: 1px solid #ececec;
 }
 
-table tr td:last-child {
+table.results tr td:last-child {
 	border-right: 0;
 }
