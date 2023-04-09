@@ -44,3 +44,18 @@ table.results td, th {
 table.results tr:nth-child(even) {
 	background-color: #ececec;
 }
+
+table.results th button {
+	background-color: #cccccc;
+	border: none;
+	cursor: pointer;
+	display: block;
+	font: inherit;
+	height: 100%;
+	margin: 0;
+	min-width: max-content;
+	padding: 0;
+	position: relative;
+	text-align: left;
+	width: 100%;
+}

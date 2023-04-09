@@ -151,7 +151,7 @@ function updateItems() {
 			// Primary attribute
 			row = primary_attrib_column.insertRow();
 			cell = row.insertCell();
-			cell.textContent = item.primaryAttribute == "" ? "-" : item.primaryAttribute;
+			cell.textContent = item.primaryAttribute.length == 0 ? "\xa0" : item.primaryAttribute;
 
 			// Add to list off waypoints
 			document.getElementById("waypoints").innerHTML += item.tomtomCommand + "<br>";
@@ -253,4 +253,20 @@ function updateClass() {
 		
 		updateItems();
 	});
+}
+
+function selectTomTomCommands() {
+	var tomtom_column = document.getElementById("tomtom_column");
+
+	var range = document.createRange();
+
+	var selection = window.getSelection();
+	selection.removeAllRanges();
+
+	range.selectNodeContents(tomtom_column);
+	selection.addRange(range);
+
+	console.log(range);
+
+	//document.execCommand("copy");
 }
