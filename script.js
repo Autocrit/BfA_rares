@@ -19,6 +19,8 @@ const slots = [
 	"Held In Off-hand"
 ];
 
+const filteredItems = [];
+
 window.onload = function onLoad()
 {
 	updateClass();
@@ -32,15 +34,12 @@ function updateItems() {
 		tbody.removeChild(tbody.lastChild);
 	}
 
-	// Clear waypoints
-	document.getElementById("waypoints").innerHTML = "";
-
 	// Get items from JSON file
 	fetch('./items.json')
 		.then(res => res.json())
 		.then(items => {
 		// Filter items based on options
-		var filteredItems = [];
+		filteredItems.length = 0;
 		items.forEach(item => {
 			if((!document.getElementById("drustvar").checked && item.zone == "Drustvar") || 
 				(!document.getElementById("nazmir").checked && item.zone == "Nazmir") ||
@@ -97,6 +96,15 @@ function updateItems() {
 			var row = tbody.insertRow();
 			var cell = null, anchor = null;
 
+			// Include/exclude checkbox
+			var checkbox = document.createElement("input");
+			checkbox.setAttribute("type", "checkbox");
+			checkbox.setAttribute("checked", "checked");
+			checkbox.setAttribute("onclick", "updateWaypoints()");
+			checkbox.setAttribute("class", "include_item");
+			cell = row.insertCell();
+			cell.appendChild(checkbox);
+
 			// Name
 			anchor = document.createElement("a");
 			anchor.setAttribute("href", item.itemURL);
@@ -130,10 +138,9 @@ function updateItems() {
 			// Primary attribute
 			cell = row.insertCell();
 			cell.textContent = item.primaryAttribute;
-
-			// Add to list off waypoints
-			document.getElementById("waypoints").innerHTML += item.tomtomCommand + "<br>";
 		});
+
+		updateWaypoints();
 	});
 }
 
@@ -231,4 +238,17 @@ function updateClass() {
 		
 		updateItems();
 	});
+}
+
+function updateWaypoints() {
+	var text = "";
+	var includeItemCheckboxes = Array.from(document.getElementsByClassName("include_item"));
+
+	for(i=0; i<includeItemCheckboxes.length; i++) {
+		if(includeItemCheckboxes[i].checked) {
+			text += filteredItems[i].tomtomCommand + "\n";
+		}
+	}
+
+	document.getElementById("waypoints").innerText = text;
 }
