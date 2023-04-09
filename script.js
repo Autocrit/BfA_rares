@@ -24,13 +24,29 @@ window.onload = function onLoad()
 	updateClass();
 }
 
+function removeAllChildNodes(parent) {
+	while (parent.firstChild) {
+		parent.removeChild(parent.firstChild);
+	}
+}
+
 function updateItems() {
-	var tbody = document.getElementById("table_contents");
+	var name_column = document.getElementById("name_column");
+	var slot_column = document.getElementById("slot_column");
+	var type_column = document.getElementById("type_column");
+	var source_column = document.getElementById("source_column");
+	var zone_column = document.getElementById("zone_column");
+	var tomtom_column = document.getElementById("tomtom_column");
+	var primary_attrib_column = document.getElementById("primary_attrib_column");
 
 	// Clear table body
-	while(tbody.hasChildNodes()) {
-		tbody.removeChild(tbody.lastChild);
-	}
+	removeAllChildNodes(name_column);
+	removeAllChildNodes(slot_column);
+	removeAllChildNodes(type_column);
+	removeAllChildNodes(source_column);
+	removeAllChildNodes(zone_column);
+	removeAllChildNodes(tomtom_column);
+	removeAllChildNodes(primary_attrib_column);
 
 	// Clear waypoints
 	document.getElementById("waypoints").innerHTML = "";
@@ -94,10 +110,10 @@ function updateItems() {
 
 		// Add items to table
 		filteredItems.forEach(item => {
-			var row = tbody.insertRow();
-			var cell = null, anchor = null;
+			var row = null, cell = null, anchor = null;
 
 			// Name
+			row = name_column.insertRow();
 			anchor = document.createElement("a");
 			anchor.setAttribute("href", item.itemURL);
 			anchor.textContent = item.name;
@@ -105,14 +121,17 @@ function updateItems() {
 			cell.appendChild(anchor);
 
 			// Slot
+			row = slot_column.insertRow();
 			cell = row.insertCell();
 			cell.textContent = item.slot;
 
 			// Type
+			row = type_column.insertRow();
 			cell = row.insertCell();
 			cell.textContent = item.type;
 
 			// Source
+			row = source_column.insertRow();
 			cell = row.insertCell();
 			anchor = document.createElement("a");
 			anchor.setAttribute("href", item.sourceURL);
@@ -120,16 +139,19 @@ function updateItems() {
 			cell.appendChild(anchor);
 
 			// Zone
+			row = zone_column.insertRow();
 			cell = row.insertCell();
 			cell.textContent = item.zone;
 
 			// TomTom command
+			row = tomtom_column.insertRow();
 			cell = row.insertCell();
 			cell.textContent = item.tomtomCommand;
 
 			// Primary attribute
+			row = primary_attrib_column.insertRow();
 			cell = row.insertCell();
-			cell.textContent = item.primaryAttribute;
+			cell.textContent = item.primaryAttribute == "" ? "-" : item.primaryAttribute;
 
 			// Add to list off waypoints
 			document.getElementById("waypoints").innerHTML += item.tomtomCommand + "<br>";
