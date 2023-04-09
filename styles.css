@@ -61,3 +61,7 @@ table.results tr:last-child td {
 table.results tr td:last-child {
 	border-right: 0;
 }
+
+table.results tr.exclude {
+	opacity: 0.3;
+}

@@ -96,6 +96,10 @@ function updateItems() {
 			var row = tbody.insertRow();
 			var cell = null, anchor = null;
 
+			//if(item.id == "160985") {
+			//	row.setAttribute("class", "exclude");
+			//}
+
 			// Include/exclude checkbox
 			var checkbox = document.createElement("input");
 			checkbox.setAttribute("type", "checkbox");
@@ -243,10 +247,17 @@ function updateClass() {
 function updateWaypoints() {
 	var text = "";
 	var includeItemCheckboxes = Array.from(document.getElementsByClassName("include_item"));
+	var rows = document.getElementById("table_contents").rows;
 
 	for(i=0; i<includeItemCheckboxes.length; i++) {
 		if(includeItemCheckboxes[i].checked) {
+			if(rows[i].getAttribute("class") == "exclude") {
+				rows[i].removeAttribute("class");
+			}
 			text += filteredItems[i].tomtomCommand + "\n";
+		}
+		else {
+			rows[i].setAttribute("class", "exclude");
 		}
 	}
 
