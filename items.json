@@ -461,7 +461,7 @@
 		"slot": "Hands",
 		"type": "Mail Armor",
 		"source": "Avatar of Xolotal",
-		"zone": "",
+		"zone": "Zuldazar",
 		"itemURL": "https://www.wowhead.com/item=161034",
 		"sourceURL": "https://www.wowhead.com/npc=129343/avatar-of-xolotal",
 		"tomtomCommand": "/way #862 49.8 57.6 Avatar of Xolotal",
