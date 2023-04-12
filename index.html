@@ -3,30 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Gear drops from BfA (Battle for Azeroth) non-elite rares</title>
+	<title>BfA rares</title>
 	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="icon" type="image/png" href="favicon.png">
 	<script>const whTooltips = {colorLinks: false, iconizeLinks: true, renameLinks: true};</script>
 	<script src="https://wow.zamimg.com/js/tooltips.js"></script>
 	<script src="script.js"></script>
 </head>
 <body>
 <div>
-	<h1>Gear drops from BfA (Battle for Azeroth) rares</h1>
+	<h1>BfA (Battle for Azeroth) rares</h1>
+	<p>Armour and weapon drops from BfA rares, aimed at gearing new level 20 (or any other level) twinks</p>
+	<ul>
+		<li>pick a class from the options on the left and/or refine the selection by zone, slot, type etc</li>
+		<li>use the checkboxes in the first column of the results to include or exclude items</li>
+		<li>copy the waypoints from the bottom of the page into <a href="https://www.curseforge.com/wow/addons/tomtom">TomTom</a>
+			using <a href="https://www.curseforge.com/wow/addons/pasteng">Paste</a> or similar addons</li>
+	</ul>
 </div>
 <div class="container">
 	<div class="column">
 		<h2>Options</h2>
-		<label>Zone</label>
-		<ul>
-			<li><input type="checkbox" id="tiragarde_sound" checked onclick="updateItems()"> Tiragarde Sound (10-60)</li>
-			<li><input type="checkbox" id="zuldazar" checked onclick="updateItems()"> Zuldazar (10-60)</li>
-			<li><input type="checkbox" id="drustvar" checked onclick="updateItems()"> Drustvar (20-60)</li>
-			<li><input type="checkbox" id="nazmir" checked onclick="updateItems()"> Nazmir (20-60)</li>
-			<li><input type="checkbox" id="stormsong_valley" onclick="updateItems()"> Stormsong Valley (30-60)</li>
-			<li><input type="checkbox" id="vol_dun" onclick="updateItems()"> Vol'dun (30-60)</li>
-		</ul>
-
 		<label>Class preset</label>
 		<ul>
 			<li><input type="radio" name="class_preset" value="Death Knight" checked onclick="updateClass()"> Death Knight</li>
@@ -41,6 +39,16 @@
 			<li><input type="radio" name="class_preset" value="Shaman" onclick="updateClass()"> Shaman</li>
 			<li><input type="radio" name="class_preset" value="Warlock" onclick="updateClass()"> Warlock</li>
 			<li><input type="radio" name="class_preset" value="Warrior" onclick="updateClass()"> Warrior</li>
+		</ul>
+
+		<label>Zone</label>
+		<ul>
+			<li><input type="checkbox" id="tiragarde_sound" checked onclick="updateItems()"> Tiragarde Sound (10-60)</li>
+			<li><input type="checkbox" id="zuldazar" checked onclick="updateItems()"> Zuldazar (10-60)</li>
+			<li><input type="checkbox" id="drustvar" checked onclick="updateItems()"> Drustvar (20-60)</li>
+			<li><input type="checkbox" id="nazmir" checked onclick="updateItems()"> Nazmir (20-60)</li>
+			<li><input type="checkbox" id="stormsong_valley" onclick="updateItems()"> Stormsong Valley (30-60)</li>
+			<li><input type="checkbox" id="vol_dun" onclick="updateItems()"> Vol'dun (30-60)</li>
 		</ul>
 
 		<label>Armor type</label>
@@ -108,6 +116,7 @@
 		<table class="results">
 			<thead>
 				<tr>
+					<th>Include</th>
 					<th>Name</th>
 					<th>Slot</th>
 					<th>Type</th>
@@ -126,55 +135,52 @@
 	<h2>Notes</h2>
 	<ul>
 		<li>
-			This is a work in progress (<a href="https://xpoff.com/threads/starter-gear-from-bfa-rares.99155/">XPOff thread</a>
-			for feedback).
+			these are non-elite rares, and non-Azerite gear drops; they are ilvl 61 at level 20, can only be looted once,
+			and can proc a socket and/or a tertiary stat
 		</li>
 		<li>
-			These are  non-elite rares, and non-Azerite gear drops. At level 20 the items are level 61, can only be looted once,
-			can proc a socket and/or a tertiary stat.
+			loot 12x <a href="https://www.wowhead.com/item=163853/pilgrimage-scroll"></a> from chests for the quest
+			<a href="https://www.wowhead.com/quest=53476/the-great-sea-scrolls"></a> and an ilvl 61 helm
 		</li>
 		<li>
-			At the same time as travelling around the four BfA zones, you can loot chests for a level 61 helm from the quest
-			<a href="https://www.wowhead.com/quest=53476/the-great-sea-scrolls"></a>. You can also get the 28 slot bag
-			<a href="https://www.wowhead.com/item=160452/goats-tote"></a> from
-			<a href="https://www.wowhead.com/npc=132076/totes"></a> (<i>/way #895 46.8 20.6 Totes</i>).
-		</li>
+			kill <a href="https://www.wowhead.com/npc=132076/totes"></a> In Tiragarde Sound
+			(<i>/way #895 46.8 20.6 Totes</i>) for a 28 slot bag</li>
 		<li>
 			<a href="https://www.wowhead.com/object=279750/hay-covered-chest"></a> in Tiragarde Sound, which rewards
 			<a href="https://www.wowhead.com/item=155571/garyls-riding-blanket"></a>,
-			starts with <a href="https://www.wowhead.com/npc=130350/guardian-of-the-spring"></a>.
+			starts with <a href="https://www.wowhead.com/npc=130350/guardian-of-the-spring"></a>;
 			Horde players might want to skip this one!
 		</li>
 		<li>
-			Similarly, "hardcore" players might want to avoid <a href="https://www.wowhead.com/npc=139358/the-caterer"></a>
-			in Drustvar, as well as the nearby flight master, as an elite 
-			<a href="https://www.wowhead.com/npc=152166/spectral-guardian"></a> can appear and one-shot you.
-			I'm not sure if this applies to Alliance.
+			there's a chance of getting on-shot by <a href="https://www.wowhead.com/npc=152166/spectral-guardian"></a>
+			in the area around <a href="https://www.wowhead.com/npc=139358/the-caterer"></a>
+			in Drustvar; I'm not sure if this applies to Alliance
 		</li>
 		<li>
-			Horde can travel to Tiragarde Sound by hopping on to the side of the Relentless from Stormwind Harbour; run up from Grom'gol.
-			Its the boat that docks and departs heading south, from the most southerly dock (<i>/way Stormwind City 22.5 55.5)</i>.
-			Set your heathstone to Castaway point (<i>/way #895 85.2 80.4 Friendly Pete</i>) if you want to return easily.
+			Horde can travel to Tiragarde Sound by hopping on to the side of the Relentless from Stormwind Harbour; run up from Grom'gol;
+			it's the boat that docks and departs heading south, from the most southerly dock (<i>/way Stormwind City 22.5 55.5)</i>;
+			set your heathstone to Castaway Point (<i>/way #895 85.2 80.4 Friendly Pete</i>) if you want to return easily
 		</li>
 		<li>
-			Alliance can travel to Zuldazar on The Golden Skipper from the Echo Isles; run/swim from Ratchet (<i>/way #463 70.6 38.2 Mith'aka</i>).
+			Alliance can travel to Zuldazar on The Golden Skipper from the Echo Isles (<i>/way #463 70.6 38.2 Mith'aka</i>);
+			run/swim from Ratchet
 		</li>
 		<li>
 			<a href="https://www.wowhead.com/item=109076/goblin-glider-kit"></a> or
 			<a href="https://www.wowhead.com/spell=126392/goblin-glider"></a> is  useful for gettings around 
-			these zones.
+			these zones
 		</li>
 		<li>
-			All data is taken from Wowhead.
+			all data is taken from Wowhead.
+		</li>
+		<li>
+			this is a work in progress; see the <a href="https://xpoff.com/threads/starter-gear-from-bfa-rares.99155/">XPOff thread</a>
+			for feedback
 		</li>
 	</ul>
 </div>
 <div>
 	<h2>TomTom waypoints</h2>
-	<p>
-		These can be copied and pasted into <a href="https://www.curseforge.com/wow/addons/tomtom">TomTom</a> using
-		<a href="https://www.curseforge.com/wow/addons/pasteng">Paste</a>.
-	</p>
 </div>
 <div id="waypoints"></div>
 </body>
