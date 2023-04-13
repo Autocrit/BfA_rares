@@ -382,7 +382,7 @@
 		"sourceURL": "https://www.wowhead.com/npc=127901/henry-breakwater",
 		"tomtomCommand": "/way #896 59.4 55.2 Henry Breakwater",
 		"primaryAttribute": "",
-		"exclude": "true"
+		"exclude": true
 	},
 	{
 		"name": "Arclight Jumpers",
