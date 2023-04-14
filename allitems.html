@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BfA rares (all items)</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="icon" type="image/png" href="favicon.png">
+	<script>const whTooltips = {colorLinks: false, iconizeLinks: true, renameLinks: true};</script>
+	<script src="https://wow.zamimg.com/js/tooltips.js"></script>
+</head>
+
+<body onload="itemsToTable()">
+	
+<script>
+const getItems = async () => {
+	const response = await fetch("./items.json");
+	if(response.status !== 200) {
+		throw new Error("Cannot fetch the data");
+	}
+
+	const items = await response.json();
+
+	return items;
+};
+
+function itemsToTable() {
+	var tbody = document.getElementById("table_contents");
+
+	// Clear table body
+	while(tbody.hasChildNodes()) {
+		tbody.removeChild(tbody.lastChild);
+	}
+	
+	getItems()
+		.then(items => {
+			items.forEach(item => {
+				var row = tbody.insertRow();
+				var cell = null, anchor = null;
+
+				// Name
+				anchor = document.createElement("a");
+				anchor.setAttribute("href", item.itemURL);
+				anchor.textContent = item.name;
+				cell = row.insertCell();
+				cell.appendChild(anchor);
+
+				// Slot
+				cell = row.insertCell();
+				cell.textContent = item.slot;
+
+				// Type
+				cell = row.insertCell();
+				cell.textContent = item.type;
+
+				// Source
+				cell = row.insertCell();
+				anchor = document.createElement("a");
+				anchor.setAttribute("href", item.sourceURL);
+				anchor.textContent = item.source;
+				cell.appendChild(anchor);
+
+				// Zone
+				cell = row.insertCell();
+				cell.textContent = item.zone;
+
+				// TomTom command
+				cell = row.insertCell();
+				cell.textContent = item.tomtomCommand;
+
+				// Primary attribute
+				cell = row.insertCell();
+				cell.textContent = item.primaryAttribute;
+
+				// Exclude
+				cell = row.insertCell();
+				cell.textContent = item.exclude;
+			});
+		})
+	.catch(err => console.log("Rejected:", err.message));
+}
+</script>
+
+	<h2>Results</h2>
+	<ul>
+		<li>all items</li>
+		<li>unsorted</li>
+		<li>unfiltered</li>
+	</ul>
+	<table class="results">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Slot</th>
+				<th>Type</th>
+				<th>Source</th>
+				<th>Zone</th>
+				<th>TomTom command</th>
+				<th>Primary attribute</th>
+				<th>Exclude</th>
+			</tr>
+		</thead>
+		<tbody id="table_contents">
+		</tbody>
+	</table>
+</body>
+</html>
