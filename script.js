@@ -96,10 +96,6 @@ function updateItems() {
 			var row = tbody.insertRow();
 			var cell = null, anchor = null;
 
-			//if(item.id == "160985") {
-			//	row.setAttribute("class", "exclude");
-			//}
-
 			// Include/exclude checkbox
 			var checkbox = document.createElement("input");
 			checkbox.setAttribute("type", "checkbox");
