@@ -382,7 +382,8 @@
 		"sourceURL": "https://www.wowhead.com/npc=127901/henry-breakwater",
 		"tomtomCommand": "/way #896 59.4 55.2 Henry Breakwater",
 		"primaryAttribute": "",
-		"exclude": true
+		"exclude": false,
+		"comment": "Didn't drop on a hunter"
 	},
 	{
 		"name": "Arclight Jumpers",
@@ -478,7 +479,8 @@
 		"itemURL": "https://www.wowhead.com/item=160475",
 		"sourceURL": "https://www.wowhead.com/npc=130143/balethorn",
 		"tomtomCommand": "/way #896 59.0 28.8 Balethorn",
-		"primaryAttribute": ""
+		"primaryAttribute": "",
+		"comment": "Dropped as Item Level 58 and Requires Level 50 on 19-04-2023"
 	},
 	{
 		"name": "Marshqueen's Crushers",
@@ -862,7 +864,8 @@
 		"itemURL": "https://www.wowhead.com/item=158683",
 		"sourceURL": "https://www.wowhead.com/npc=127844/gluttonous-yeti",
 		"tomtomCommand": "/way #896 63.0 69.6 Gluttonous Yeti",
-		"primaryAttribute": ""
+		"primaryAttribute": "",
+		"comment": "Dropped as Item Level 58 and Requires Level 50 on 19-04-2023"
 	},
 	{
 		"name": "Sea-Scourge Greatblade",
@@ -1115,7 +1118,7 @@
 		"sourceURL": "https://www.wowhead.com/npc=138618/haywire-golem",
 		"tomtomCommand": "/way #896 23.8 29.4 Haywire Golem",
 		"primaryAttribute": "Agility",
-		"exclude": true
+		"comment":"Dropped as Item Level 58 and Requires Level 50 on 04-04-2023"
 	},
 	{
 		"name": "Pirate Chief's Speargun",
