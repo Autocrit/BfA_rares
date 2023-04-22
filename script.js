@@ -138,6 +138,10 @@ function updateItems() {
 			// Primary attribute
 			cell = row.insertCell();
 			cell.textContent = item.primaryAttribute;
+
+			// Comment
+			cell = row.insertCell();
+			cell.textContent = item.comment;
 		});
 
 		updateWaypoints();
