@@ -76,6 +76,10 @@ function itemsToTable() {
 				// Exclude
 				cell = row.insertCell();
 				cell.textContent = item.exclude;
+
+				// Comment
+				cell = row.insertCell();
+				cell.textContent = item.comment;
 			});
 		})
 	.catch(err => console.log("Rejected:", err.message));
@@ -99,6 +103,7 @@ function itemsToTable() {
 				<th>TomTom command</th>
 				<th>Primary attribute</th>
 				<th>Exclude</th>
+				<th>Comment</th>
 			</tr>
 		</thead>
 		<tbody id="table_contents">
