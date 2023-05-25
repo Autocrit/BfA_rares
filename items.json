@@ -480,7 +480,8 @@
 		"sourceURL": "https://www.wowhead.com/npc=130143/balethorn",
 		"tomtomCommand": "/way #896 59.0 28.8 Balethorn",
 		"primaryAttribute": "",
-		"comment": "Dropped as Item Level 58 and Requires Level 50 on 19-04-2023"
+		"comment": "Dropped as Item Level 58 and Requires Level 50 on 19-04-2023",
+		"exclude": true
 	},
 	{
 		"name": "Marshqueen's Crushers",
