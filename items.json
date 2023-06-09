@@ -866,7 +866,8 @@
 		"sourceURL": "https://www.wowhead.com/npc=127844/gluttonous-yeti",
 		"tomtomCommand": "/way #896 63.0 69.6 Gluttonous Yeti",
 		"primaryAttribute": "",
-		"comment": "Dropped as Item Level 58 and Requires Level 50 on 19-04-2023"
+		"comment": "Dropped as Item Level 58 and Requires Level 50 on 19-04-2023",
+		"exclude": true
 	},
 	{
 		"name": "Sea-Scourge Greatblade",
@@ -1119,7 +1120,8 @@
 		"sourceURL": "https://www.wowhead.com/npc=138618/haywire-golem",
 		"tomtomCommand": "/way #896 23.8 29.4 Haywire Golem",
 		"primaryAttribute": "Agility",
-		"comment":"Dropped as Item Level 58 and Requires Level 50 on 04-04-2023"
+		"comment":"Dropped as Item Level 58 and Requires Level 50 on 04-04-2023",
+		"exclude": true
 	},
 	{
 		"name": "Pirate Chief's Speargun",

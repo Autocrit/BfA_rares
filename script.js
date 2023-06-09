@@ -78,8 +78,7 @@ function updateItems() {
 				(!document.getElementById("crossbow").checked && item.type == "Crossbow") ||
 				(!document.getElementById("gun").checked && item.type == "Gun") ||
 				(!document.getElementById("shield").checked && item.type == "Shield") ||
-				(!document.getElementById("off_hand_frill").checked && item.type == "Off-hand Frill") ||
-				(item.exclude)) {
+				(!document.getElementById("off_hand_frill").checked && item.type == "Off-hand Frill")) {
 					return;
 			}
 
@@ -99,7 +98,9 @@ function updateItems() {
 			// Include/exclude checkbox
 			var checkbox = document.createElement("input");
 			checkbox.setAttribute("type", "checkbox");
-			checkbox.setAttribute("checked", "checked");
+			if(!item.exclude) {
+				checkbox.setAttribute("checked", "checked");
+			}
 			checkbox.setAttribute("onclick", "updateWaypoints()");
 			checkbox.setAttribute("class", "include_item");
 			cell = row.insertCell();
