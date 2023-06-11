@@ -963,7 +963,8 @@
 		"itemURL": "https://www.wowhead.com/item=160451",
 		"sourceURL": "https://www.wowhead.com/npc=129181/barman-bill",
 		"tomtomCommand": "/way #895 76.6 83.2 Barman Bill",
-		"primaryAttribute": "Agility"
+		"primaryAttribute": "Agility",
+		"comment": "Agility daggers (probably) only drop for rogues"
 	},
 	{
 		"name": "Soul-Curse Executioner",
@@ -1157,7 +1158,8 @@
 		"itemURL": "https://www.wowhead.com/item=160952",
 		"sourceURL": "https://www.wowhead.com/npc=133190/daggerjaw",
 		"tomtomCommand": "/way #862 74.2 39.6 Daggerjaw",
-		"primaryAttribute": "Agility"
+		"primaryAttribute": "Agility",
+		"comment": "Agility daggers (probably) only drop for rogues"
 	},
 	{
 		"name": "Warmother's Drummer",
@@ -1229,7 +1231,8 @@
 		"itemURL": "https://www.wowhead.com/item=159518",
 		"sourceURL": "https://www.wowhead.com/npc=127877/longfang",
 		"tomtomCommand": "/way #896 59.4 55.2 Longfang",
-		"primaryAttribute": "Agility"
+		"primaryAttribute": "Agility",
+		"comment": "Agility daggers (probably) only drop for rogues"
 	},
 	{
 		"name": "Amani Berserker's Chopper",
