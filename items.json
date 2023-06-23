@@ -853,7 +853,9 @@
 		"itemURL": "https://www.wowhead.com/item=160979",
 		"sourceURL": "https://www.wowhead.com/npc=136428/dark-chronicler",
 		"tomtomCommand": "/way #862 44.0 76.6 Dark Chronicler",
-		"primaryAttribute": ""
+		"primaryAttribute": "",
+		"comment": "Doesn't appear to drop as of 23-06-2023",
+		"exclude": true
 	},
 	{
 		"name": "Giant Yeti's Bowl",
