@@ -1013,7 +1013,7 @@
 		"zone": "Tiragarde Sound",
 		"itemURL": "https://www.wowhead.com/item=161599",
 		"sourceURL": "https://www.wowhead.com/npc=139205/p4-n73r4",
-		"tomtomCommand": "/way #895 65.2 64.6 P4-N73R4",
+		"tomtomCommand": "/way #895 64.32, 63.24 P4-N73R4",
 		"primaryAttribute": "Agility"
 	},
 	{
