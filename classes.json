@@ -34,6 +34,18 @@
 		"off_hand_frill": true
 	},
 	{
+		"class": "Evoker",
+		"mail": true,
+		"intellect": true,
+		"dagger": true,
+		"one_handed_axe": true,
+		"one_handed_mace": true,
+		"one_handed_sword": true,
+		"fist_weapon": true,
+		"staff": true,
+		"off_hand_frill": true
+	},
+	{
 		"class": "Hunter",
 		"mail": true,
 		"agility": true,
