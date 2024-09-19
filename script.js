@@ -109,6 +109,7 @@ function updateItems() {
 			// Name
 			anchor = document.createElement("a");
 			anchor.setAttribute("href", item.itemURL);
+			anchor.setAttribute("target", "_blank");
 			anchor.textContent = item.name;
 			cell = row.insertCell();
 			cell.appendChild(anchor);
@@ -125,6 +126,7 @@ function updateItems() {
 			cell = row.insertCell();
 			anchor = document.createElement("a");
 			anchor.setAttribute("href", item.sourceURL);
+			anchor.setAttribute("target", "_blank");
 			anchor.textContent = item.source;
 			cell.appendChild(anchor);
 
