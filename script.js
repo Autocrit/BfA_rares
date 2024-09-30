@@ -44,6 +44,7 @@ function updateItems() {
 			if((!document.getElementById("drustvar").checked && item.zone == "Drustvar") || 
 				(!document.getElementById("nazmir").checked && item.zone == "Nazmir") ||
 				(!document.getElementById("tiragarde_sound").checked && item.zone == "Tiragarde Sound") ||
+				(!document.getElementById("boralus").checked && item.zone == "Boralus") ||
 				(!document.getElementById("zuldazar").checked && item.zone == "Zuldazar") ||
 				(!document.getElementById("vol_dun").checked && item.zone == "Vol'dun") ||
 				(!document.getElementById("stormsong_valley").checked && item.zone == "Stormsong Valley") ||

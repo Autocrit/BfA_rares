@@ -1883,5 +1883,17 @@
 		"sourceURL": "https://www.wowhead.com/npc=134571/skycaller-teskris",
 		"tomtomCommand": "/way #864 47.0 25.6 Skycaller Teskris",
 		"primaryAttribute": "Intellect"
+	},
+	{
+		"name": "Sharktooth Hatchet",
+		"id": 155273,
+		"slot": "One-Hand",
+		"type": "Axe",
+		"source": "Sawtooth",
+		"zone": "Boralus",
+		"itemURL": "https://www.wowhead.com/item=155273",
+		"sourceURL": "https://www.wowhead.com/npc=139287/sawtooth",
+		"tomtomCommand": "/way #1161 79.6 44.2 Sawtooth",
+		"primaryAttribute": "Intellect"
 	}
 ]
